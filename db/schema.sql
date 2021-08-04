@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS congo_db;
+CREATE DATABASE congo_db; 
