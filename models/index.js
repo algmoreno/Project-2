@@ -1,7 +1,12 @@
-const Post = require('./Post');
-const User = require('./User');
-const Vote = require('./Vote');
-const Comment = require('./Comment');
+const Category = require('./Category');
+const Product = require('./Product');
 
+Product.belongsTo(Category, {
+  foreignKey: 'category_id'
+});
 
-module.exports = { User, Post, Vote, Comment };
+Category.hasMany(Product, {
+  foreignKey: 'category_id'
+})
+
+module.exports = { Category, Product };
