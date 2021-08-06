@@ -1,6 +1,2 @@
--- DROP DATABASE
-DROP DATABASE IF EXISTS congo_db;
-
--- CREATE DATABASE
-CREATE DATABASE congo_db;
-
+DROP DATABASE IF EXISTS just_tech_news_db;
+CREATE DATABASE just_tech_news_db; 
