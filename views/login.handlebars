@@ -1,32 +1,37 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congo Login</title>
+  <link rel="stylesheet" href="../public/stylesheets/login.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../images/congo2.png" width="80" height="80" alt="congo" />
+      <h1>Welcome to Congo</h1>
+    </div>
+    <form action="#" method="post" autocomplete="off">
+      <div class="form-group">
+        <input type="text" name="username" id="username" required class="inputField" autocomplete="off">
+        <label for="username">Username</label>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" id="password" required class="inputField" autocomplete="off">
+        <label for="password">Password</label>
+      </div>
+      <button type="login" class="loginButton">Log in</button>
+    </form>
+    <div class="footer">
+      <a href="#">Forgot password?</a>
+      <span>.</span>
+      <a href="#">Sign up for Congo</a>
+    </div>
   </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
-<script src="/javascript/login.js"></script>
+</body>
+
+</html>
