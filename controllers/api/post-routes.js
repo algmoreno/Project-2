@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
       'post_url',
       'title',
       'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
       'post_url',
       'title',
       'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+     //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -76,7 +76,7 @@ router.get('/:id', (req, res) => {
 });
 
 //('/', withAuth, (req, res) for log in function
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
@@ -89,17 +89,8 @@ router.post('/', (req, res) => {
     });
 });
 
-// router.put('/upvote', withAuth, (req, res) => {
-//   Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-//     .then(updatedVoteData => res.json(updatedVoteData))
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-
 //('/', withAuth, (req, res) for log in function
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update(req.body,
     {
       title: req.body.title
@@ -124,7 +115,7 @@ router.put('/:id', (req, res) => {
 });
 
 //('/', withAuth, (req, res) for log in function
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Post.destroy({
     where: {

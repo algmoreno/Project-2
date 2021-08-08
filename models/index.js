@@ -18,7 +18,7 @@ Post.belongsTo(Category, {
 
 User.belongsToMany(Post, {
   through: Comment,
-  as: 'voted_posts',
+  //as: 'voted_posts',
 
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
@@ -26,7 +26,7 @@ User.belongsToMany(Post, {
 
 Post.belongsToMany(User, {
   through: Comment,
-  as: 'voted_posts',
+  //as: 'voted_posts',
   foreignKey: 'post_id',
   onDelete: 'SET NULL'
 });

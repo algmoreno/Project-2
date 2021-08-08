@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 //('/', withAuth, (req, res) for log in function
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Comment.create({
     comment_text: req.body.comment_text,
     user_id: req.session.user_id,
@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
 });
 
 //('/', withAuth, (req, res) for log in function
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id
