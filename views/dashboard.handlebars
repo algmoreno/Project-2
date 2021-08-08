@@ -7,6 +7,23 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
+      <label for="category">Choose a Category:</label>
+      <select name="categories" id="categories">
+        <option value="music">Music</option>
+        <option value="movies">Movies</option>
+        <option value="tv">TV</option>
+        <option value="video-games">Video Games</option>
+        <option value="books">Books</option>
+        <option value="cooking">Cooking</option>
+        <option value="gardening">Gardening</option>
+        <option value="interior-design">Interior Design</option>
+        <option value="fashion">Fashion</option>
+        <option value="travel">Travel/Vacation</option>
+        <option value="restaurants">Restaurants</option>
+        <option value="social">Social</option>
+      </select>
+    </div>
+    <div>
       <label for="post-url">Post</label>
       <input id="post-url" name="post-url" class="post-post" />
     </div>
@@ -21,10 +38,11 @@
     <li>
       {{> post_info}}
       <div>{{post.post_url}}</div>
-      <a href="/dashboard/edit/{{post.id}}" class = "edit-link">Edit Post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/choose-category.js"></script>
