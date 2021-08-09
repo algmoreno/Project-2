@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const { Post, User, Comment, Category } = require('../models');
 
 router.get('/', (req, res) => {
   console.log('======================');
@@ -29,16 +29,23 @@ router.get('/', (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      Category.findAll({}).then(dbCatData => {
+        const categories = dbCatData.map(post => post.get({ plain: true }))
+        console.log(categories)
+        res.render('homepage', {
+          categories,
+          posts,
+          loggedIn: req.session.loggedIn
+        });
+      })
 
-      res.render('homepage', {
-        posts,
-        loggedIn: req.session.loggedIn
-      });
     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+
+
 });
 
 router.get('/post/:id', (req, res) => {

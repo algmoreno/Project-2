@@ -12,7 +12,11 @@ Post.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-Post.belongsTo(Category, {
+Category.belongsTo(Post, {
+  foreignKey: 'category_id'
+});
+
+Post.hasOne(Category, {
   foreignKey: 'category_id'
 })
 
