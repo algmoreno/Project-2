@@ -5,3 +5,11 @@
   </li>
   {{/each}}
 </ol>
+
+<div>
+  <ul class= "categories">
+    {{#each categories as |category|}}
+    <li><a href= "{{category.category_name}}">{{category.category_name}}</a></li>
+    {{/each}}
+  </ul>
+</div>
