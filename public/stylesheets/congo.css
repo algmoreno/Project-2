@@ -74,6 +74,13 @@ body {
     color: white;
 }
 
+.sidebarOption li {
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 20px;
+    color: white;
+}
+
 .sidebarOption:hover {
     background-color: var(--background-color);
     border-radius: 30px;
