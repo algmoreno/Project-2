@@ -25,43 +25,23 @@
   </nav>
   <!-- sidebar starts -->
   <div class="sidebar">
-    <div class="sidebarOption active">
+    <div class="sidebarOption">
       <span class="material-icons"> bungalow </span>
       <a href="/" style="text-decoration: none;">Home</a>
     </div>
 
     <div class="sidebarOption">
       <span class="material-icons"> mood </span>
-      <a href="/dashboard" style="text-decoration: none;">Profile</a>
+      <a href="/dashboard" style="text-decoration: none;">Your Posts</a>
     </div>
 
     <div class="sidebarOption">
             <select class="dropdown" name="selectCategories" id="categories">
-                <option>Forums</option>
-                <option value="music">Music</option>
-                <option value="movies">Movies</option>
-                <option value="tv">TV</option>
-                <option value="video-games">Video Games</option>
-                <option value="books">Books</option>
-                <option value="cooking">Cooking</option>
-                <option value="gardening">Gardening</option>
-                <option value="interior-design">Interior Design</option>
-                <option value="fashion">Fashion</option>
-                <option value="travel">Travel/Vacation</option>
-                <option value="restaurants">Restaurants</option>
-                <option value="social">Social</option>
                 {{#each categories as |category|}}
                 <option value='{{category.category_name}}'>{{ category.category_name }}</option>
                 {{/each}}
             </select>
         </div>
-    </div>
-    <div>
-      <ul>
-      {{#each categories as |category|}}
-      <li><a href="/api/posts/categories/{{category.category_id}}" style="text-decoration: none;" value='{{category.category_name}}'>{{ category.category_name }}</a></li>
-      {{/each}}
-      </ul>
     </div>
   </div>
   <!-- sidebar ends -->
@@ -70,8 +50,8 @@
   <!-- widgets starts -->
   <div class="widgets">
     <div class="widgets__profile">
-      <img class="user__avatar" src="img/placeholder.png" alt="placeholder" />
-      <a href="/login">Login</a>
+      <img class="user__avatar" src="../../images/placeholder.png" alt="placeholder" />
+      <a href="/login" style="text-decoration: none;" >Login</a>
     </div>
 
     <div class="widgets__widgetContainer">
