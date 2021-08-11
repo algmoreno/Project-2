@@ -1,26 +1,3 @@
-{{!-- <section>
-  <h2>Create Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </url" name="post-div>
-    <div>
-      <label for="category">Choose a Category:</label>
-      <select name="categories" id="categories">
-        {{#each categories as |category|}}
-        <option value='{{category.category_name}}'>{{ category.category_name }}</option>
-        {{/each}}
-      </select>
-    </div>
-    <div>
-      <label for="post-url">Post</label>
-      <input id="post-url" name="post-url" class="post-post" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section> --}}
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
@@ -29,11 +6,12 @@
     <li>
       {{> post_info}}
       <div>{{post.post_url}}</div>
-      <a href="/dashboard/edit/{{post.post_id}}" class="edit-link">Edit Post</a>
+      <a href="/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/edit-post.js"></script> 
 <script src="/javascript/choose-category.js"></script>
