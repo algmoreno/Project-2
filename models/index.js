@@ -12,25 +12,26 @@ Post.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-Category.belongsTo(Post, {
-  foreignKey: 'category_id'
-});
+// Post.belongsTo(Category, {
+//   foreignKey: 'post_id',
+//   onDelete: 'SET NULL'
+// });
 
-Post.hasOne(Category, {
-  foreignKey: 'category_id'
-})
+// Post.hasOne(Category, {
+//   constraints: false,
+//   allowNull: true,
+//   foreignKey: 'post_id'
+// })
+
 
 User.belongsToMany(Post, {
   through: Comment,
-  //as: 'voted_posts',
-
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
 
 Post.belongsToMany(User, {
   through: Comment,
-  //as: 'voted_posts',
   foreignKey: 'post_id',
   onDelete: 'SET NULL'
 });
