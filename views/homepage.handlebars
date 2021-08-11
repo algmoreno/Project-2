@@ -1,18 +1,38 @@
     <!-- feed starts -->
-    <div class="feed">
-        <!-- postbox starts -->
-        <div class="postBox">
-            <form>
-                <div class="postbox__input">
-                    <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="" />
-                    <input type="text" placeholder="What's happening?" />
-                </div>
-                <button class="postBox__postButton">Post</button>
-            </form>
-        </div>
-        <!-- postbox ends -->
+  <section>
+  <h2>Create Post</h2>
 
-        <!-- post starts -->
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="category">Choose a Category:</label>
+      <select name="categories" id="categories">
+        <option value="music">Music</option>
+        <option value="movies">Movies</option>
+        <option value="tv">TV</option>
+        <option value="video-games">Video Games</option>
+        <option value="books">Books</option>
+        <option value="cooking">Cooking</option>
+        <option value="gardening">Gardening</option>
+        <option value="interior-design">Interior Design</option>
+        <option value="fashion">Fashion</option>
+        <option value="travel">Travel/Vacation</option>
+        <option value="restaurants">Restaurants</option>
+        <option value="social">Social</option>
+      </select>
+    </div>
+    <div>
+      <label for="post-url">Post</label>
+      <input id="post-url" name="post-url" class="post-post" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+        {{#if posts.length}}
+        {{#each posts as |post|}}
         <div class="post">
             <div class="post__avatar">
                 <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="" />
@@ -28,11 +48,9 @@
                         </h3>
                     </div>
                     <div class="post__headerDescription">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <p>{{post.post_url}}</p>
                     </div>
                 </div>
-                <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg"
-                    alt="" />
                 <div class="post__footer">
                     <span class="material-icons"> sentiment_very_satisfied </span>
                     <span class="material-icons"> add_comment </span>
@@ -40,36 +58,11 @@
                 </div>
             </div>
         </div>
+        {{/each}}
+        {{/if}}
         <!-- post ends -->
 
-        <!-- post starts -->
-        <div class="post">
-            <div class="post__avatar">
-                <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="" />
-            </div>
-
-            <div class="post__body">
-                <div class="post__header">
-                    <div class="post__headerText">
-                        <h3>
-                            Username
-                            <span class="post__headerSpecial"><span class="material-icons post__badge"> verified
-                                </span>@username</span>
-                        </h3>
-                    </div>
-                    <div class="post__headerDescription">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg"
-                    alt="" />
-                <div class="post__footer">
-                    <span class="material-icons"> sentiment_very_satisfied </span>
-                    <span class="material-icons"> add_comment </span>
-                    <span class="material-icons"> send </span>
-                </div>
-            </div>
-        </div>
-        <!-- post ends -->
+       
     </div>
     <!-- feed ends -->
+<script src="/javascript/add-post.js"></script>
