@@ -36,8 +36,25 @@
     </div>
 
     <div class="sidebarOption">
-      <span class="material-icons"> groups </span>
-      <h2>Forums</h2>
+            <select class="dropdown" name="selectCategories" id="categories">
+                <option>Forums</option>
+                <option value="music">Music</option>
+                <option value="movies">Movies</option>
+                <option value="tv">TV</option>
+                <option value="video-games">Video Games</option>
+                <option value="books">Books</option>
+                <option value="cooking">Cooking</option>
+                <option value="gardening">Gardening</option>
+                <option value="interior-design">Interior Design</option>
+                <option value="fashion">Fashion</option>
+                <option value="travel">Travel/Vacation</option>
+                <option value="restaurants">Restaurants</option>
+                <option value="social">Social</option>
+                {{#each categories as |category|}}
+                <option value='{{category.category_name}}'>{{ category.category_name }}</option>
+                {{/each}}
+            </select>
+        </div>
     </div>
     <div>
       <ul>
