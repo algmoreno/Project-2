@@ -103,6 +103,18 @@ body {
     margin-top: 20px;
 }
 
+.sidebarOption .dropdown {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    padding: 1e, 1.5em;
+    position: flex;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background-color: var(--website-color);
+    align-items: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -259,6 +271,17 @@ body {
 /* widgets */
 .widgets {
     flex: 0.3;
+}
+
+.widgets__profile {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .widgets__input {
