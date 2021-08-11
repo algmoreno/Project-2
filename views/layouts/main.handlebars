@@ -27,12 +27,12 @@
   <div class="sidebar">
     <div class="sidebarOption active">
       <span class="material-icons"> bungalow </span>
-      <a href="/">Home</a>
+      <a href="/" style="text-decoration: none;">Home</a>
     </div>
 
     <div class="sidebarOption">
       <span class="material-icons"> mood </span>
-      <a href="/dashboard">Profile</a>
+      <a href="/dashboard" style="text-decoration: none;">Profile</a>
     </div>
 
     <div class="sidebarOption">
@@ -42,7 +42,7 @@
     <div>
       <ul>
       {{#each categories as |category|}}
-      <li><a href="/api/posts/categories/{{category.category_id}}" value='{{category.category_name}}'>{{ category.category_name }}</a></li>
+      <li><a href="/api/posts/categories/{{category.category_id}}" style="text-decoration: none;" value='{{category.category_name}}'>{{ category.category_name }}</a></li>
       {{/each}}
       </ul>
     </div>
