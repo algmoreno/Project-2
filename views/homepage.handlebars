@@ -1,7 +1,69 @@
-<ol class="post-list">
+<div class = "feed">
+<section>
+  <form class="postBox">
+    <div>
+      <h4 for="post-title">Title:</h4>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <h4 for="category">Category:</h4>
+      <select name="categories" id="categories">
+        <option value="music">Music</option>
+        <option value="movies">Movies</option>
+        <option value="tv">TV</option>
+        <option value="video-games">Video Games</option>
+        <option value="books">Books</option>
+        <option value="cooking">Cooking</option>
+        <option value="gardening">Gardening</option>
+        <option value="interior-design">Interior Design</option>
+        <option value="fashion">Fashion</option>
+        <option value="travel">Travel/Vacation</option>
+        <option value="restaurants">Restaurants</option>
+        <option value="social">Social</option>
+      </select>
+    </div>
+    <div class= "postbox__input">
+      <input type= "text" placeholder= "What's Happening?" id="post-url" name="post-url" class="post-post" />
+    </div>
+    <button type="submit" class="postBox__postButton">Post</button>
+  </form>
+</section>
+
+<div>
+  {{#if posts.length}}
   {{#each posts as |post|}}
-  <li>
-   {{> post_info post }}
-  </li>
+  <div class="post">
+    <div class="post__avatar">
+      <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="" />
+    </div>
+    <div class="post__body">
+      <div class="post__header">
+        <div class="post__headerText">
+          <h3>
+            {{post.user.username}}
+            <span class="post__headerSpecial"><span>
+                <span>@{{post.user.username}}</span>
+          </h3>
+        </div>
+      </div>
+      <div>
+        <h2>{{post.title}}</h2>
+      </div>
+      <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg" alt="" />
+      <div class="post__headerDescription">
+        <p>{{post.post_url}}</p>
+      </div>
+      <div class="post__footer">
+        <span> 
+          <a href="/edit/{{post.id}}" style="text-decoration: none;" class="material-icons"> edit </a>
+          </span>
+      </div>
+    </div>
+  </div>
   {{/each}}
-</ol>
+  {{/if}}
+</div>
+
+</div>
+
+<script src="/javascript/add-post.js"></script>

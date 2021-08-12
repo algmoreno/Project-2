@@ -29,7 +29,7 @@ const categoryData = [
     category_name: 'Fashion',
   },
   {
-    category_name: 'Travel/Vacations',
+    category_name: 'Travel/Vacation',
   },
   {
     category_name: 'Restaurants',
@@ -43,4 +43,5 @@ const seedCategories = () => Category.bulkCreate(categoryData);
 
 module.exports = seedCategories;
 
+seedCategories();
 

@@ -2,36 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Congo</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <link rel="stylesheet" href="../stylesheets/congo.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Congo</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href= "/dashboard">Create</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="../images/congotransparentw.png" width="112" height="100">
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar starts -->
+  <div class="sidebar">
+    <div class="sidebarOption">
+      <span class="material-icons"> bungalow </span>
+      <a href="/" style="text-decoration: none;">Home</a>
+    </div>
 
-    </footer>
+    <div class="sidebarOption">
+      <span class="material-icons"> mood </span>
+      <a href="/dashboard" style="text-decoration: none;">Your Posts</a>
+    </div>
+
+    <div class="sidebarOption">
+            <select class="dropdown" name="selectCategories" id="categories">
+                {{#each categories as |category|}}
+                <option value='{{category.category_name}}'>{{ category.category_name }}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
   </div>
-{{#if loggedIn}}
-<script src = "/javascript/logout.js"></script>
-{{/if}}
+  <!-- sidebar ends -->
+
+  {{{body}}}
+  <!-- widgets starts -->
+  <div class="widgets">
+    <div class="widgets__profile">
+      <img class="user__avatar" src="../../images/placeholder.png" alt="placeholder" />
+      <a href="/login" style="text-decoration: none;" >Login</a>
+    </div>
+
+    <div class="widgets__widgetContainer">
+      <h2>Popular Forums</h2>
+      <h4>Politics</h4>
+      <h4>Movies</h4>
+      <h4>Music</h4>
+      <h4>Fitness</h4>
+    </div>
 </body>
+
 </html>
