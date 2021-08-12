@@ -188,28 +188,102 @@ body {
 
 .postBox {
     padding-bottom: 10px;
+    padding-top: 30px;
     border-bottom: 8px solid var(--secondary-color);
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+#post-title {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#email-login {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#password-login {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#username-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#email-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#password-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+.bttn {
+    margin-bottom: 28px;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .postBox form {
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color);
+    padding-bottom: 20px;
 }
 
 .postbox__input {
     display: flex;
-    padding: 20px;
+    padding-top: 30px;
+    border-radius: 20px;
 }
 
 .postbox__input input {
     flex: 1;
+    height: 40px;
     background-color: var(--secondary-color);
     color: white;
-    margin-left: 20px;
     font-size: 20px;
     border: none;
     outline: none;
+}
+
+#categories {
+    color: white;
+    height: 25px;
+    width: 50%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
 }
 
 .postBox__postButton {
@@ -252,7 +326,7 @@ body {
 }
 
 .post__footer a {
-  color: white;
+    color: white;
 }
 
 .post__badge {
@@ -303,10 +377,10 @@ body {
 }
 
 .widgets__profile a {
-  font-weight: 800;
-  font-size: 20px;
-  margin-right: 20px;
-  color: white;
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+    color: white;
 }
 
 
@@ -341,4 +415,24 @@ body {
 .widgets__widgetContainer h2 {
     font-size: 18px;
     font-weight: 800;
+}
+
+.login-form {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    font-family: "Roboto", sans-serif;
+}
+
+.signup-form {
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    font-family: "Roboto", sans-serif;
 }
