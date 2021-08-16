@@ -1,6 +1,7 @@
 # Congo
   # Table of Contents:
   * [Description](#description)
+  * [Screenshots](#screenshots)
   * [Credits](#credits)
   * [Built with](#builtwith)
   * [License](#license)
@@ -8,7 +9,31 @@
   * [GitHub](#github)
 
 # Description 
+As social media users, we wanted to create an app that was simple and easy to maneuver that would allow you to filter out posts by category, so that people can search and post based on their interests.
 
+
+# Screenshots
+
+## Home (w/o posts)
+![Home(w/o posts)](./public/images/screenshots/congo1.PNG)
+
+## Home
+![Home](./public/images/screenshots/congotwo.PNG)
+
+## Login
+![Login](./public/images/screenshots/congo7.PNG)
+
+## Your Posts
+![Your Posts](./public/images/screenshots/congo3.PNG)
+
+## Edit Posts
+![Edit Posts](./public/images/screenshots/congo4.PNG)
+
+## Comments
+![Comments](./public/images/screenshots/congo5.PNG)
+
+## Test Comment
+![Test Comment](./public/images/screenshots/congo6.PNG)
 
 # Credits 
 Created By:
