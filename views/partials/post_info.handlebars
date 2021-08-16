@@ -1,12 +1,12 @@
-<article class="post">
+<article class="post" id="postdata">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <a href="{{post_url}}" style="text-decoration: none;" target="_blank" id="postnum">{{title}}</a>
     <span>({{format_url post_url}})</span>
   </div>
   <div class="meta">
-     {{format_plural "point" vote_count}} by {{user.username}} on
+    {{format_plural "point" vote_count}} by {{user.username}} on
     {{format_date created_at}}
     |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}" style="text-decoration: none;" id="commentnum">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
