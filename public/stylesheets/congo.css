@@ -1,3 +1,4 @@
+/* Style for Home Page Begins */
 * {
     margin: 0;
     padding: 0;
@@ -148,7 +149,6 @@ body {
     padding-right: 20px;
 }
 
-/* feed */
 .feed {
     flex: 0.5;
     border-right: 1px;
@@ -180,7 +180,6 @@ body {
     scrollbar-width: none;
 }
 
-/* post box */
 .postbox__input img {
     border-radius: 50%;
     height: 40px;
@@ -202,59 +201,7 @@ body {
     border-color: var(--website-color);
 }
 
-#email-login {
-    color: white;
-    height: 25px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-color: var(--website-color);
-}
-
-#password-login {
-    color: white;
-    height: 25px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-color: var(--website-color);
-}
-
-#username-signup {
-    color: white;
-    height: 25px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-color: var(--website-color);
-}
-
-#email-signup {
-    color: white;
-    height: 25px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-color: var(--website-color);
-}
-
-#password-signup {
-    color: white;
-    height: 25px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-color: var(--website-color);
-}
-
-.bttn {
-    margin-bottom: 28px;
-    margin-top: 30px;
-    width: 120px;
-    height: 32px;
-    background: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 2px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
+/* Posts */
 .postBox form {
     display: flex;
     flex-direction: column;
@@ -299,7 +246,6 @@ body {
     margin-left: auto;
 }
 
-/* post */
 .post__avatar img {
     border-radius: 50%;
     height: 40px;
@@ -417,6 +363,64 @@ body {
     font-weight: 800;
 }
 
+/* Style for Home Page Ends */
+
+/*Style for Login Page Begins*/
+#email-login {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#password-login {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#username-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#email-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+
+#password-signup {
+    color: white;
+    height: 25px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-color: var(--website-color);
+}
+/* Used for almost all buttons */
+.bttn {
+    margin-bottom: 28px;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    font-weight: 800;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
 .login-form {
     top: 0;
     left: 0;
@@ -436,3 +440,127 @@ body {
     height: 400px;
     font-family: "Roboto", sans-serif;
 }
+/* Style for Login Ends */
+
+.your-posts {
+    padding-top: 5px;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Styling for Your Posts Page Begins */
+.your-posts ol {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.your-posts .edit-link {
+    margin-bottom: 28px;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#postdata{
+    padding-top: 40px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#postnum {
+    color: var(--primary-color);
+}
+
+/*  Styling for Comments */
+#commentnum {
+    color: var(--primary-color);
+}
+.comment-form {
+    background-color: var(--secondary-color);
+    padding-top: 40px;
+}
+#comment-body {
+    flex: 1;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.comments {
+    padding-top: 40px;
+    padding-left: 10px;
+    background-color: var(--secondary-color);
+    font-weight: 800;
+}
+
+.comment .text {
+    color: var(--primary-color);
+}
+/* End of Styling for Your Posts Page */
+
+/* Styling for Edit Posts Page Begins */
+#edit-post-page {
+    background-color: var(--secondary-color);
+    padding-top: 20px;
+}
+
+#back-to-create {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.edit-post-form {
+    padding-top: 20px;
+}
+
+#edit-post-input {
+    flex: 1;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+#edit-post-info {
+    font-weight: 800;
+}
+
+#edit-page-comment-num {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.delete-post-btn {
+    margin-bottom: 28px;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    font-weight: 800;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add-comment-input {
+    flex: 1;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+/* End of Styling for Edit Posts Page */
