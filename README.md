@@ -21,7 +21,7 @@ As social media users, we wanted to create an app that was simple and easy to ma
 ![Home](./public/images/screenshots/congotwo.PNG)
 
 ## Login
-![Login](./public/images/screenshots/congo7.PNG)
+![Login](./public/images/screenshots/congo6.PNG)
 
 ## Your Posts
 ![Your Posts](./public/images/screenshots/congo3.PNG)
@@ -31,9 +31,6 @@ As social media users, we wanted to create an app that was simple and easy to ma
 
 ## Comments
 ![Comments](./public/images/screenshots/congo5.PNG)
-
-## Test Comment
-![Test Comment](./public/images/screenshots/congo6.PNG)
 
 # Credits 
 Created By:

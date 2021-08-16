@@ -36,12 +36,21 @@
     </div>
 
     <div class="sidebarOption">
-            <select class="dropdown" name="selectCategories" id="categories">
-                {{#each categories as |category|}}
-                <option value='{{category.category_name}}'>{{ category.category_name }}</option>
-                {{/each}}
-            </select>
-        </div>
+      <h4 for="category">Category:</h4>
+      <select name="categories" id="categories">
+        <option value="music">Music</option>
+        <option value="movies">Movies</option>
+        <option value="tv">TV</option>
+        <option value="video-games">Video Games</option>
+        <option value="books">Books</option>
+        <option value="cooking">Cooking</option>
+        <option value="gardening">Gardening</option>
+        <option value="interior-design">Interior Design</option>
+        <option value="fashion">Fashion</option>
+        <option value="travel">Travel/Vacation</option>
+        <option value="restaurants">Restaurants</option>
+        <option value="social">Social</option>
+      </select>
     </div>
   </div>
   <!-- sidebar ends -->
@@ -51,7 +60,7 @@
   <div class="widgets">
     <div class="widgets__profile">
       <img class="user__avatar" src="../../images/placeholder.png" alt="placeholder" />
-      <a href="/login" style="text-decoration: none;" >Login</a>
+      <a href="/login" style="text-decoration: none;">Login</a>
     </div>
 
     <div class="widgets__widgetContainer">
